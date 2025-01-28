@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Portfolio | Arun Tomar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">My Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="greeting">👋 Hi there, I'm</span>
+                <h1><span class="highlight">Arun Tomar</span></h1>
+                <div class="typed-text">
+                    <span>Frontend Developer</span> | 
+                    <span>Aspiring Full Stack Devlopment</span> | 
+                    <span>CS Student</span>
+                </div>
+                <p>I transform complex problems into elegant solutions. Currently pursuing Computer Engineering at Gujarat Technological University, specializing in AI and Frontend Development. Passionate about creating technology that makes a difference.</p>
+                <a href="CV.pdf" class="cv-button" download>Download CV</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/arun-img.jpeg" alt=" Arun's Image">
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="images/Arun.jpeg" alt="Profile Picture" class="profile-pic">
+            <div class="about-text">
+                <p>Currently pursuing my Computer Engineering degree at GTU, with a focus on Artificial Intelligence and web technologies. I'm passionate about solving complex problems and building innovative solutions.</p>
+                <h3>Technical Skills:</h3>
+                <ul>
+                    <li>Languages: Python, Java, C++</li>
+                    <li>Web Dev: HTML,CSS, Tailwind CSS, JavaScript</li>
+                    <li>Tools: Git and Github</li>
+                    <li>Areas: Data Structures, Algorithms, OOP's, AI/ML</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2>MY Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="images/project1.png" alt="Algorithm Visualizer">
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS </span>
+                    </div>
+                    <h3>Landing Page</h3>
+                    <p>A visually appealing dynamic landing page for hikers, showcasing scenic trails, essential gear, adventure tips, and outdoor exploration.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images/project2.jpeg" alt="ML Project">
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Kivy</span>
+                    </div>
+                    <h3>Piano tiles game</h3>
+                    <p>A rhythm-based piano game where players match tunes by pressing tile accurately,if incorrect is presses end the game instantly.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images/project3.png" alt="Web App">
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                    </div>
+                    <h3>Weather App</h3>
+                    <p>An interactive weather app utilizing API to deliver real-time updates, detailed forecasts, and current weather conditions seamlessly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-content">
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" rows="6" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Your Name | Computer Science Student</p>
+    </footer>
+</body>
+</html> 
