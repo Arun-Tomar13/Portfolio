@@ -18,4 +18,4 @@ export const socialLinks = [
     label: "Email",
     href: links.email ? `mailto:${links.email}` : "#contact",
   },
-];
+] as const;

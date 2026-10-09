@@ -2,8 +2,10 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
 import { socialLinks } from "@/data/links";
 import { fadeUp, stagger } from "@/components/motion";
+import SocialIcon from "@/components/SocialIcon";
 
 const skills = ["HTML", "CSS", "JavaScript", "Python", "Git"];
 
@@ -47,7 +49,7 @@ export default function Hero() {
             variants={fadeUp}
             className="mb-7 text-[clamp(52px,8vw,96px)] font-extrabold leading-none tracking-[-0.04em] text-text"
           >
-            Arun <span className="text-accent">Tomar</span>
+            Build <span className="text-accent">better</span>
           </motion.h1>
 
           <motion.p
@@ -61,13 +63,13 @@ export default function Hero() {
 
           <motion.div
             variants={fadeUp}
-            className="mb-10 flex flex-wrap items-center gap-3"
+            className="mb-8 flex flex-wrap items-center gap-3"
           >
             <a
-              href="#projects"
+              href="#experience"
               className="rounded-btn bg-accent px-7 py-3.5 text-[15px] font-semibold text-on-accent transition-all duration-200 hover:-translate-y-px hover:shadow-[0_10px_28px_-10px_rgba(227,179,65,0.5)]"
             >
-              View projects <span aria-hidden="true">↗</span>
+              View experience <span aria-hidden="true">↗</span>
             </a>
 
             <a
@@ -77,21 +79,12 @@ export default function Hero() {
               Get in touch
             </a>
           </motion.div>
-
-          <motion.div
+          <motion.p
             variants={fadeUp}
-            aria-label="Core skills"
-            className="flex flex-wrap gap-2.5"
+            className="font-mono text-sm text-muted"
           >
-            {skills.map((skill) => (
-              <span
-                key={skill}
-                className="rounded-chip border border-line px-[13px] py-[7px] font-mono text-[12px] text-muted"
-              >
-                {skill}
-              </span>
-            ))}
-          </motion.div>
+            “Code never lies.”
+          </motion.p>
         </motion.div>
 
         <motion.div
@@ -104,32 +97,28 @@ export default function Hero() {
           className="mx-auto w-full max-w-[340px]"
         >
           <div className="rounded-photo bg-[linear-gradient(160deg,rgba(227,179,65,.55),rgba(227,179,65,.06)_60%)] p-px">
-            <div className="flex aspect-[340/370] flex-col items-center justify-center overflow-hidden rounded-[27px] bg-elevated">
-              <div className="mb-4 flex size-16 items-center justify-center rounded-full border border-line text-2xl text-accent">
-                AT
-              </div>
-              <p className="font-mono text-xs tracking-wider text-dim">
-                [ YOUR PHOTO ]
-              </p>
-              <p className="mt-2 text-sm text-muted">
-                Arun Tomar
-              </p>
+            <div className="relative aspect-[340/370] overflow-hidden rounded-[27px] bg-elevated">
+              <Image
+                src="/arun.png"
+                alt="Portrait of Arun Tomar"
+                fill
+                sizes="(max-width: 768px) 100vw, 340px"
+                className="object-cover object-center"
+              />
             </div>
           </div>
 
-          <div className="mt-3 grid grid-cols-3 gap-2.5">
+          <div className="mt-3 flex justify-center gap-4">
             {socialLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
+                aria-label={link.label}
                 target={link.href.startsWith("http") ? "_blank" : undefined}
                 rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="flex items-center justify-center gap-1.5 rounded-social border border-line bg-panel px-2 py-3 text-sm font-medium text-muted transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:text-text"
+                className="flex items-center justify-center gap-1.5 rounded-social border border-line bg-panel p-3 text-muted transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:text-text"
               >
-                {link.label}
-                <span className="text-accent" aria-hidden="true">
-                  ↗
-                </span>
+                <SocialIcon label={link.label} />
               </a>
             ))}
           </div>

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Section from "@/components/Section";
 import { links, socialLinks } from "@/data/links";
 import { fadeUp, stagger } from "@/components/motion";
+import SocialIcon from "@/components/SocialIcon";
 
 export default function Contact() {
   const [message, setMessage] = useState("");
@@ -40,19 +41,17 @@ export default function Contact() {
             open it in your email app.
           </p>
 
-          <div className="grid grid-cols-3 gap-2.5">
+          <div className="flex gap-4">
             {socialLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
+                aria-label={link.label}
                 target={link.href.startsWith("http") ? "_blank" : undefined}
                 rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="flex items-center justify-center gap-1.5 rounded-social border border-line bg-panel px-2 py-3 text-sm font-medium text-muted transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:text-text"
+                className="flex items-center justify-center gap-1.5 rounded-social border border-line bg-panel px-2 py-3 text-muted transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:text-text"
               >
-                {link.label}
-                <span className="text-accent" aria-hidden="true">
-                  ↗
-                </span>
+                <SocialIcon label={link.label} />
               </a>
             ))}
           </div>
