@@ -97,7 +97,7 @@ export default function Hero() {
           className="mx-auto w-full max-w-[340px]"
         >
           <div className="rounded-photo bg-[linear-gradient(160deg,rgba(227,179,65,.55),rgba(227,179,65,.06)_60%)] p-px">
-            <div className="relative aspect-[340/370] overflow-hidden rounded-[27px] bg-elevated">
+            <div className="relative aspect-340/370 overflow-hidden rounded-[27px] bg-elevated">
               <Image
                 src="/arun.png"
                 alt="Portrait of Arun Tomar"
@@ -106,6 +106,13 @@ export default function Hero() {
                 className="object-cover object-center"
               />
             </div>
+          </div>
+
+          <div className="my-4 text-center text-sm text-muted">
+            <p>
+              <span className="font-semibold text-text">Arun Tomar</span> ·
+              Software Engineer
+            </p>
           </div>
 
           <div className="mt-3 flex justify-center gap-4">
