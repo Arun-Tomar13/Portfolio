@@ -33,7 +33,7 @@ export default function Section({
         {eyebrow && (
           <p className="mb-3 font-mono text-sm text-accent">{eyebrow}</p>
         )}
-        <h2 className="text-[clamp(34px,5vw,44px)] font-extrabold leading-tight tracking-[-0.03em] text-text">
+        <h2 className="text-[clamp(32px,4.6vw,40px)] font-extrabold leading-tight tracking-[-0.03em] text-text">
           {title}
         </h2>
       </motion.div>

@@ -39,7 +39,7 @@ export default function Projects() {
               </span>
             </div>
 
-            <h3 className="mb-3 text-xl font-semibold text-text">
+            <h3 className="mb-3 text-[18px] font-semibold text-text">
               {project.title}
             </h3>
             <p className="mb-7 text-sm leading-6 text-muted">

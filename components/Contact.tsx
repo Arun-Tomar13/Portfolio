@@ -36,7 +36,7 @@ export default function Contact() {
         className="grid gap-10 lg:grid-cols-[380px_minmax(0,1fr)]"
       >
         <motion.div variants={fadeUp}>
-          <p className="mb-7 max-w-[520px] text-lg leading-[1.7] text-muted">
+          <p className="mb-7 max-w-[520px] text-[17px] leading-[1.75] text-muted">
             Have an idea, role, or collaboration in mind? Send a note and I’ll
             open it in your email app.
           </p>
@@ -95,7 +95,7 @@ export default function Contact() {
           <div className="mt-5 flex flex-wrap items-center gap-4">
             <button
               type="submit"
-              className="rounded-btn bg-accent px-7 py-3 text-[15px] font-semibold text-on-accent transition-all duration-200 hover:-translate-y-px hover:shadow-[0_10px_28px_-10px_rgba(227,179,65,0.5)]"
+              className="rounded-btn bg-accent px-7 py-3 text-sm font-semibold text-on-accent transition-all duration-200 hover:-translate-y-px hover:shadow-[0_10px_28px_-10px_rgba(227,179,65,0.5)]"
             >
               Send message
             </button>

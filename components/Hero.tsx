@@ -47,14 +47,14 @@ export default function Hero() {
 
           <motion.h1
             variants={fadeUp}
-            className="mb-7 text-[clamp(52px,8vw,96px)] font-extrabold leading-none tracking-[-0.04em] text-text"
+            className="mb-7 text-[clamp(48px,7.5vw,88px)] font-extrabold leading-none tracking-[-0.04em] text-text"
           >
             Build <span className="text-accent">better</span>
           </motion.h1>
 
           <motion.p
             variants={fadeUp}
-            className="mb-9 max-w-[560px] text-lg leading-[1.7] text-muted"
+            className="mb-9 max-w-[560px] text-[17px] leading-[1.75] text-muted"
           >
             I build practical, polished digital experiences from idea to launch —
             combining frontend craft, problem-solving, and solid engineering to
@@ -67,14 +67,14 @@ export default function Hero() {
           >
             <a
               href="#experience"
-              className="rounded-btn bg-accent px-7 py-3.5 text-[15px] font-semibold text-on-accent transition-all duration-200 hover:-translate-y-px hover:shadow-[0_10px_28px_-10px_rgba(227,179,65,0.5)]"
+              className="rounded-btn bg-accent px-7 py-3.5 text-sm font-semibold text-on-accent transition-all duration-200 hover:-translate-y-px hover:shadow-[0_10px_28px_-10px_rgba(227,179,65,0.5)]"
             >
               View experience <span aria-hidden="true">↗</span>
             </a>
 
             <a
               href="#contact"
-              className="rounded-btn border border-line-strong px-7 py-3.5 text-[15px] font-medium text-text transition-all duration-200 hover:border-accent"
+              className="rounded-btn border border-line-strong px-7 py-3.5 text-sm font-medium text-text transition-all duration-200 hover:border-accent"
             >
               Get in touch
             </a>

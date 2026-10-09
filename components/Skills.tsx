@@ -39,7 +39,7 @@ export default function Skills() {
       >
         <div className="mb-7 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
-            <h3 className="text-[28px] font-extrabold leading-tight tracking-[-0.03em] text-text">
+            <h3 className="text-[25px] font-extrabold leading-tight tracking-[-0.03em] text-text">
               Tools I use to ship
             </h3>
             <p className="mt-3 max-w-[620px] text-sm leading-6 text-muted">

@@ -41,7 +41,7 @@ export default function Experience() {
                     {item.period}
                   </p>
                 )}
-                <h3 className="text-xl font-semibold text-text">{item.role}</h3>
+                <h3 className="text-[18px] font-semibold text-text">{item.role}</h3>
                 <p className="mt-1 text-sm text-muted">{item.org}</p>
                 {points.length > 0 && (
                   <ul className="mt-4 space-y-2 text-sm leading-6 text-muted">

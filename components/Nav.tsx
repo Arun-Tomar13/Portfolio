@@ -50,7 +50,7 @@ export default function Nav() {
         <a
           href="#home"
           onClick={() => setMenuOpen(false)}
-          className="text-xl font-extrabold tracking-tight text-text"
+          className="text-[18px] font-extrabold tracking-tight text-text"
         >
           arun<span className="text-accent">.</span>tomar
         </a>
@@ -60,7 +60,7 @@ export default function Nav() {
             <a
               key={link.href}
               href={link.href}
-              className={`relative text-[15px] transition-colors duration-200 hover:text-text ${
+              className={`relative text-sm transition-colors duration-200 hover:text-text ${
                 activeSection === link.href.slice(1) ? "text-text" : "text-muted"
               }`}
             >
@@ -105,7 +105,7 @@ export default function Nav() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-base text-muted transition-colors hover:text-accent"
+                className="text-[15px] text-muted transition-colors hover:text-accent"
               >
                 {link.label}
               </a>
