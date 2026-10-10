@@ -30,7 +30,7 @@ export default function Experience() {
         />
 
         <div className="space-y-6 sm:space-y-8">
-          {experience.map((item, index) => (
+          {experience.map((item) => (
             <motion.article
               key={`${item.role}-${item.org}`}
               variants={fadeUp}

@@ -7,11 +7,6 @@ import Section from "@/components/Section";
 import { projects } from "@/data/projects";
 import { fadeUp, stagger } from "@/components/motion";
 
-const projectImages: Record<string, string> = {
-  Talkify: "/talkify.png",
-  Foody: "/foody.png",
-};
-
 export default function Projects() {
   return (
     <Section

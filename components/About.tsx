@@ -118,7 +118,7 @@ export default function About() {
 
   <p>
     What keeps me curious is figuring out the unknown. I enjoy debugging,
-    exploring different approaches, and digging deeper when things don't
+    exploring different approaches, and digging deeper when things don&apos;t
     work as expected. For me, the best part is when a difficult problem
     finally clicks.
   </p>

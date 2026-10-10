@@ -79,7 +79,10 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
-
+img {
+  max-width: 100%;
+  height: auto;
+}
 body::after {
   position: fixed;
   z-index: -1;

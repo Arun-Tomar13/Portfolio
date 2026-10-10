@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/arun-img.jpeg",
+        url: "/images/arun.png",
         alt: "Arun Tomar",
       },
     ],

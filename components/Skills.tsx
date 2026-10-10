@@ -99,7 +99,7 @@ const skills: { name: string; Icon: IconType }[] = [
               <motion.div
                 key={skill.name}
                 variants={fadeUp}
-      className="group flex min-h-20.5 min-w-25 max-w-25 flex-1 flex-col items-center justify-center gap-2 rounded-chip border border-line bg-elevated p-3 text-center transition-all duration-200 ease-out hover:-translate-y-1 hover:border-[rgba(22 py-47,179,65,0.45)] hover:bg-panel sm:flex-none"
+      className="group flex min-h-20.5 min-w-25 max-w-25 flex-1 flex-col items-center justify-center gap-2 rounded-chip border border-line bg-elevated p-3 text-center transition-all duration-200 ease-out hover:-translate-y-1 hover:border-[rgba(227,179,65,0.45)] hover:bg-panel sm:flex-none"
               >
                 <skill.Icon
                   aria-hidden="true"
