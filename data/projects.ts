@@ -1,18 +1,33 @@
-export const projects = [
+
+export type Project = {
+  title: string;
+  category: string;
+  description: string;
+  tags: string[];
+  image: string;
+  live: string | null;
+  code: string;
+};
+
+export const projects: Project[] = [
   {
-    title: "Weather App",
-    tags: ["HTML", "CSS", "JavaScript"],
+    title: "Talkify",
+    category: "REAL-TIME COMMUNICATION",
     description:
-      "An interactive weather app that uses a weather API to show real-time conditions and forecasts.",
-    live: "[TO BE PROVIDED]",
-    code: "[TO BE PROVIDED]",
+      "A communication platform for real-time messaging, video calls, screen sharing, and language exchange.",
+    tags: ["React", "Express", "MongoDB", "Zustand", "Stream", "JWT"],
+    image: "/talkify.png",
+    live: null,
+    code: "https://github.com/Arun-Tomar13/Talkify",
   },
   {
-    title: "Piano Tiles Game",
-    tags: ["Python", "Kivy"],
+    title: "Foody",
+    category: "FOOD ORDERING PLATFORM",
     description:
-      "A rhythm game where players tap the right tiles in time. One wrong press ends the game.",
+      "A food ordering application built around a modern React interface.",
+    tags: ["React", "JavaScript", "Redux Toolkit", "Axios", "Material UI"],
+    image: "/foody.png",
     live: null,
-    code: "[TO BE PROVIDED]",
+    code: "https://github.com/Arun-Tomar13/Foody",
   },
 ];

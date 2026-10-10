@@ -1,20 +1,23 @@
+
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Section from "@/components/Section";
 import { projects } from "@/data/projects";
 import { fadeUp, stagger } from "@/components/motion";
 
-function hasLink(value: string | null) {
-  return Boolean(value && !value.startsWith("["));
-}
+const projectImages: Record<string, string> = {
+  Talkify: "/talkify.png",
+  Foody: "/foody.png",
+};
 
 export default function Projects() {
   return (
     <Section
       id="projects"
-      eyebrow="// Projects"
-      title="Two focused builds."
+      eyebrow="// Selected work"
+      title="Things I've built."
       className="pt-10"
     >
       <motion.div
@@ -24,51 +27,76 @@ export default function Projects() {
         viewport={{ once: true, amount: 0.16 }}
         className="grid gap-5 md:grid-cols-2"
       >
-        {projects.map((project) => (
-          <motion.article
+        {projects.map((project, index) => (
+          <motion.a
             key={project.title}
+            href={project.code}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`View ${project.title} on GitHub`}
             variants={fadeUp}
-            className="group rounded-card border border-line bg-panel p-[22px] transition-all duration-200 hover:-translate-y-1 hover:border-[rgba(227,179,65,.4)]"
+            className="group relative isolate flex min-h-[340px] flex-col overflow-hidden rounded-card border border-line bg-panel transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(227,179,65,0.45)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent sm:min-h-[360px]"
           >
-            <div className="mb-5 flex items-center justify-between gap-4">
-              <p className="font-mono text-xs text-accent">
-                {project.tags.join(" · ")}
-              </p>
-              <span className="text-accent" aria-hidden="true">
-                ↗
-              </span>
-            </div>
+            {/* Background project image */}
+            <Image
+  src={project.image}
+  alt=""
+  fill
+  sizes="(max-width: 767px) 100vw, 50vw"
+  className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"
+/>
 
-            <h3 className="mb-3 text-[18px] font-semibold text-text">
-              {project.title}
-            </h3>
-            <p className="mb-7 text-sm leading-6 text-muted">
-              {project.description}
-            </p>
+            {/* Dark overlays keep the text readable */}
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 z-0 bg-linear-to-b from-[#0A0D12]/65 via-[#0A0D12]/55 to-[#0A0D12]/97"
+            />
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 -z-0 bg-gradient-to-r from-[#0A0D12]/35 to-transparent"
+            />
 
-            <div className="flex gap-5 text-sm font-medium text-muted">
-              {hasLink(project.live) && (
-                <a
-                  href={project.live ?? ""}
-                  className="transition-colors hover:text-accent"
-                  target="_blank"
-                  rel="noopener noreferrer"
+            {/* Card content */}
+            <div className="relative z-10 flex flex-1 flex-col p-5 sm:p-6">
+              <div className="mb-auto flex items-center justify-between gap-4">
+                <span className="rounded-full border border-white/15 bg-[#0A0D12]/50 px-3 py-1.5 font-mono text-xs text-accent backdrop-blur-md">
+                  PROJECT / 0{index + 1}
+                </span>
+
+                <span
+                  aria-hidden="true"
+                  className="flex size-10 items-center justify-center rounded-full border border-white/20 bg-[#0A0D12]/50 text-lg text-text backdrop-blur-md transition-all duration-200 group-hover:border-accent group-hover:bg-accent group-hover:text-on-accent"
                 >
-                  Live demo
-                </a>
-              )}
-              {hasLink(project.code) && (
-                <a
-                  href={project.code}
-                  className="transition-colors hover:text-accent"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Code
-                </a>
-              )}
+                  ↗
+                </span>
+              </div>
+
+              <div className="mt-20">
+                <p className="mb-2 font-mono text-[10px] tracking-[0.16em] text-accent sm:text-[11px]">
+                  {project.category}
+                </p>
+
+                <h3 className="mb-3 text-2xl font-semibold tracking-tight text-white transition-colors group-hover:text-accent sm:text-3xl">
+                  {project.title}
+                </h3>
+
+                <p className="mb-5 max-w-lg text-sm leading-6 text-white/75">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-chip border border-white/15 bg-[#0A0D12]/55 px-2.5 py-1 font-mono text-[10px] text-white/80 backdrop-blur-md sm:text-[11px]"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
-          </motion.article>
+          </motion.a>
         ))}
       </motion.div>
     </Section>
