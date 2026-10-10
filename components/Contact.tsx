@@ -48,7 +48,7 @@ export default function Contact() {
         whileInView="show"
         viewport={{ once: true, amount: 0.12 }}
         transition={shouldReduceMotion ? { staggerChildren: 0 } : undefined}
-        className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:gap-8"
+        className="grid gap-6 lg:grid-cols-2 lg:gap-8"
       >
         {/* Contact introduction */}
         <motion.div
@@ -156,13 +156,13 @@ export default function Contact() {
           variants={fadeUp}
           initial={false}
           onSubmit={handleSubmit}
-          className="relative order-first overflow-hidden rounded-card border border-line bg-panel p-5 shadow-[0_24px_70px_-44px_rgba(227,179,65,0.3)] sm:p-7 lg:order-last"
+          className="relative order-first overflow-hidden rounded-card border border-line bg-panel p-5 shadow-[0_24px_70px_-44px_rgba(227,179,65,0.3)] sm:p-6 lg:order-last"
         >
           <div
             aria-hidden="true"
             className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/70 to-transparent"
           />
-          <div className="mb-6 flex items-start justify-between gap-4">
+          <div className="mb-5 flex items-start justify-between gap-4">
             <div>
               <p className="mb-2 font-mono text-[10px] tracking-[0.16em] text-accent">
                 LET&apos;S TALK
@@ -194,7 +194,7 @@ export default function Contact() {
             </span>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-3 sm:grid-cols-2">
             <label className="grid gap-2 text-sm text-muted">
               Your name
               <input
@@ -221,12 +221,12 @@ export default function Contact() {
             </label>
           </div>
 
-          <label className="mt-5 grid gap-2 text-sm text-muted">
+          <label className="mt-4 grid gap-2 text-sm text-muted">
             What&apos;s on your mind?
             <textarea
               required
               name="message"
-              rows={5}
+              rows={4}
               maxLength={2000}
               value={body}
               onChange={(event) => {
@@ -242,7 +242,7 @@ export default function Contact() {
             </span>
           </label>
 
-          <div className="mt-5 flex flex-wrap items-center gap-4">
+          <div className="mt-4 flex flex-wrap items-center gap-4">
             <button
               type="submit"
               className="inline-flex items-center justify-center gap-1 rounded-btn bg-accent-button px-6 py-3 text-sm font-semibold text-on-accent transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_28px_-10px_rgba(227,179,65,0.5)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
@@ -259,7 +259,7 @@ export default function Contact() {
             </p>
           </div>
 
-          <p className="mt-5 border-t border-line pt-4 text-xs leading-5 text-dim">
+          <p className="mt-4 border-t border-line pt-3 text-xs leading-5 text-dim">
             This opens a Gmail draft. Review and send it there; the website
             doesn&apos;t send or store your message.
           </p>

@@ -13,7 +13,7 @@ const commands = [
   { label: "Jump to Contact", action: "section", target: "contact" },
   { label: "Open GitHub", action: "external", target: links.github },
   { label: "Open LinkedIn", action: "external", target: links.linkedin },
-  { label: "Download CV", action: "download", target: links.cv },
+  { label: "Download CV", action: "external", target: links.cv },
 ];
 
 export default function CommandPalette() {
@@ -66,10 +66,6 @@ export default function CommandPalette() {
 
     if (command.action === "external") {
       window.open(command.target, "_blank", "noopener,noreferrer");
-    }
-
-    if (command.action === "download") {
-      window.location.href = command.target;
     }
 
     setOpen(false);

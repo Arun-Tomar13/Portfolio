@@ -34,7 +34,7 @@ export default function Hero() {
               ? { duration: 0.01 }
               : { staggerChildren: 0.12 }
           }
-          className="flex flex-col items-start"
+          className="flex flex-col items-center text-center md:items-start md:text-left"
         >
           <motion.p
             variants={fadeUp}
@@ -65,7 +65,7 @@ export default function Hero() {
 
           <motion.div
             variants={fadeUp}
-            className="mb-8 flex flex-wrap items-center gap-3"
+            className="mb-8 flex flex-wrap items-center justify-center gap-3 md:justify-start"
           >
             <a
               href="#experience"

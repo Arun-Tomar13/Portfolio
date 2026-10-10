@@ -4,7 +4,7 @@ export const links = {
   medium: "https://medium.com/@aruntomar1330",
   email: `aruntomar1330@gmail.com`,
   phone: "9484651568",
-  cv: "/CV.pdf",
+  cv: "/Arun_Tomar_CV.pdf",
 };
 
 export function getEmailComposeUrl(subject = "", body = "") {

@@ -100,10 +100,11 @@ useEffect(() => {
 
           <a
             href={siteLinks.cv}
-            download
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex  justify-center items-center gap-1 rounded-btn bg-accent-button px-4 py-2.5 text-sm font-semibold text-on-accent transition-all duration-200 hover:-translate-y-px hover:shadow-[0_10px_28px_-10px_rgba(227,179,65,0.5)] xl:px-5"
           >
-            Download CV <FaDownload color="black" />
+            Download CV <FaDownload color="black" aria-hidden="true" />
           </a>
         </div>
 
@@ -147,7 +148,8 @@ useEffect(() => {
 
             <a
               href={siteLinks.cv}
-              download
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMenuOpen(false)}
               className="inline-flex w-fit rounded-btn bg-accent-button px-5 py-3 text-sm font-semibold text-on-accent"
             >
