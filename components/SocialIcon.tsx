@@ -1,5 +1,5 @@
 type SocialIconProps = {
-  label: "LinkedIn" | "GitHub" | "Email";
+  label: "LinkedIn" | "GitHub" | "Medium" | "Email";
 };
 
 export default function SocialIcon({ label }: SocialIconProps) {
@@ -25,6 +25,21 @@ export default function SocialIcon({ label }: SocialIconProps) {
         fill="currentColor"
       >
         <path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.555.103.758-.241.758-.535v-2.08c-3.086.671-3.737-1.31-3.737-1.31-.505-1.283-1.233-1.625-1.233-1.625-1.008-.689.076-.675.076-.675 1.115.078 1.701 1.145 1.701 1.145.991 1.699 2.6 1.208 3.234.924.1-.718.388-1.209.705-1.487-2.464-.28-5.054-1.232-5.054-5.484 0-1.211.433-2.2 1.144-2.976-.115-.28-.496-1.407.108-2.934 0 0 .933-.299 3.055 1.137a10.63 10.63 0 0 1 5.56 0c2.12-1.436 3.051-1.137 3.051-1.137.606 1.527.225 2.654.11 2.934.713.776 1.142 1.765 1.142 2.976 0 4.263-2.594 5.201-5.066 5.475.398.344.753 1.019.753 2.054v3.063c0 .297.2.644.763.534A11.101 11.101 0 0 0 12 .9Z" />
+      </svg>
+    );
+  }
+
+  if (label === "Medium") {
+    return (
+      <svg
+        aria-hidden="true"
+        className="size-5"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <ellipse cx="6.5" cy="12" rx="5.5" ry="7.5" />
+        <ellipse cx="17" cy="12" rx="2.7" ry="7.5" />
+        <ellipse cx="22.5" cy="12" rx="1.2" ry="7.5" />
       </svg>
     );
   }

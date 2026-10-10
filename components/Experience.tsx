@@ -26,7 +26,7 @@ export default function Experience() {
         {/* Timeline rail */}
         <div
           aria-hidden="true"
-          className="absolute bottom-8 left-[7px] top-8 w-px bg-gradient-to-b from-accent/70 via-line to-transparent sm:left-[11px]"
+          className="absolute bottom-8 left-[9.5px] top-[38px] w-px bg-linear-to-b from-accent/70 via-line to-transparent sm:left-[11.5px] sm:top-10"
         />
 
         <div className="space-y-6 sm:space-y-8">
@@ -39,7 +39,7 @@ export default function Experience() {
               {/* Timeline marker */}
               <span
                 aria-hidden="true"
-                className={`absolute left-0 top-7 size-[15px] rounded-full border-[4px] border-bg sm:left-1 sm:top-8 sm:size-[17px] ${
+                className={`absolute left-0 top-7 size-5 rounded-full border-4 border-bg sm:left-1 sm:top-8 sm:size-4.25 ${
                   item.current ? "bg-accent" : "bg-dim"
                 }`}
               />
@@ -56,11 +56,7 @@ export default function Experience() {
                       <span className="size-1.5 rounded-full bg-accent" />
                       CURRENT ROLE
                     </span>
-                  ) : (
-                    <span className="rounded-full border border-line bg-elevated px-3 py-1.5 font-mono text-[10px] tracking-wider text-dim">
-                      EXPERIENCE / 0{index + 1}
-                    </span>
-                  )}
+                  ) : null }
                 </div>
 
                 {/* Role heading */}
