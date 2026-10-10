@@ -21,7 +21,7 @@ export default function Section({
   return (
     <section
       id={id}
-      className={`mx-auto max-w-[1280px] scroll-mt-24 px-6 pb-20 pt-8 md:pb-[120px] md:pt-12 lg:px-[72px] ${className}`}
+      className={`mx-auto max-w-[1280px] px-6 pb-24 pt-4 md:pb-[155px] md:pt-6 lg:px-[72px] ${className}`}
     >
       <motion.div
         variants={fadeUp}

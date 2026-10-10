@@ -41,14 +41,18 @@ export default function Contact() {
     >
       <motion.div
         variants={stagger}
-        initial="hidden"
+        initial={false}
         whileInView="show"
         viewport={{ once: true, amount: 0.12 }}
         transition={shouldReduceMotion ? { staggerChildren: 0 } : undefined}
         className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:gap-8"
       >
         {/* Contact introduction */}
-        <motion.div variants={fadeUp} className="flex flex-col gap-6">
+        <motion.div
+          variants={fadeUp}
+          initial={false}
+          className="flex flex-col gap-6"
+        >
           <div className="relative overflow-hidden rounded-card border border-line bg-panel p-5 sm:p-6">
             <div
               aria-hidden="true"
@@ -153,8 +157,9 @@ export default function Contact() {
         {/* Contact form */}
         <motion.form
           variants={fadeUp}
+          initial={false}
           onSubmit={handleSubmit}
-          className="relative overflow-hidden rounded-card border border-line bg-panel p-5 shadow-[0_24px_70px_-44px_rgba(227,179,65,0.3)] sm:p-7"
+          className="relative order-first overflow-hidden rounded-card border border-line bg-panel p-5 shadow-[0_24px_70px_-44px_rgba(227,179,65,0.3)] sm:p-7 lg:order-last"
         >
           <div
             aria-hidden="true"

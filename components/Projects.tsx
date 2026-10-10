@@ -18,7 +18,6 @@ export default function Projects() {
       id="projects"
       eyebrow="// Selected work"
       title="Things I've built."
-      className="pt-10"
     >
       <motion.div
         variants={stagger}

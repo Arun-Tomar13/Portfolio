@@ -49,18 +49,47 @@
 }
 
 html {
+  min-height: 100%;
+  overflow-y: auto;
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   margin: 0;
-  background: var(--background);
+  overflow-x: clip;
+  background:
+    radial-gradient(
+      ellipse 72% 38% at 78% 0%,
+      rgba(227, 179, 65, 0.075),
+      transparent 72%
+    ),
+    radial-gradient(
+      ellipse 55% 32% at 0% 35%,
+      rgba(89, 108, 139, 0.07),
+      transparent 75%
+    ),
+    var(--background);
   color: var(--text);
   font-family: var(--font-outfit), sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+body::before {
+  position: fixed;
+  z-index: -1;
+  pointer-events: none;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.018) 1px,
+    transparent 1px
+  );
+  background-size: 112px 100%;
+  content: "";
+  inset: 0;
+  mask-image: linear-gradient(to bottom, black, transparent 75%);
 }
 
 ::selection {
