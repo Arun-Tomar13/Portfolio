@@ -73,7 +73,7 @@ Anchors: `#home`, `#about`, `#projects`, `#experience`, `#contact`. Sticky nav l
    - **Left:** eyebrow, name (one line), paragraph, two pill buttons ("View projects" amber fill, 15px 28px; "Get in touch" ghost with 1px `lineStrong` border), then a row of 5 skill chips (HTML, CSS, JavaScript, Python, Git): outlined, 1px `line`, radius 8, padding 7px 13px, `muted`.
    - **Right (340px wide column):**
      1. Photo, 340x370, radius 28, 1px gradient border `linear-gradient(160deg, rgba(227,179,65,.55), rgba(227,179,65,.06) 60%)`, inner background `elevated`.
-     2. **Below the photo, a row of 3 equal buttons: LinkedIn, GitHub, Email**, each `panel` background, 1px `line` border, radius 12, padding 12px, 14px weight 500, with a trailing `↗` in `accent`. Gap 10px. This row is required.
+     2. **Below the photo, a row of 3 equal buttons: LinkedIn, GitHub, Email**, each `panel` background, 1px `line` border, radius 12, padding 12px, and 14px weight 500. Gap 10px. This row is required.
    - Under 900px wide, stack: text first, then photo, then links.
 3. **About**: short paragraph (see content), then a compact grid of facts (Education, Current role, Location, Focus).
 4. **Projects: exactly 2 cards**, side by side in a 2-column grid (stack on mobile). See section 7.
@@ -88,7 +88,7 @@ Container: max-width 1136px, horizontal padding 72px (24px on mobile). Section v
 - **Primary button:** `bg accent`, `text onAccent`, weight 600, pill. Hover: translateY(-1px) and `box-shadow: 0 10px 28px -10px rgba(227,179,65,.5)`.
 - **Ghost button:** transparent, 1px `lineStrong`, `text`. Hover: border `accent`.
 - **Card:** `panel` background, 1px `line`, radius 18, padding 22px 24px. Hover: border `rgba(227,179,65,.4)` and translateY(-3px).
-- **Project card layout:** top row = mono tag (e.g. `HTML · CSS · JS`, 12px, `accent`) and `↗` on the right; title; description; then a small row of text links ("Live demo", "Code") in `muted`, hover `accent`.
+- **Project card layout:** top row = mono tag (e.g. `HTML · CSS · JS`, 12px, `accent`) and a distinct external-link icon on the right; title; description; then a small row of text links ("Live demo", "Code") in `muted`, hover `accent`.
 - **Chip:** outlined, no fill (see Hero).
 - **Status pill (optional, one use only):** `success` dot plus "Open to work" in `muted`.
 - **Focus ring (all interactive elements):** `outline: 2px solid #E3B341; outline-offset: 2px`.

@@ -3,6 +3,8 @@
 
 import { useEffect, useState } from "react";
 import { links as siteLinks } from "@/data/links";
+import { FaDownload } from "react-icons/fa6";
+
 
 const links = [
   { label: "About", href: "#about" },
@@ -18,6 +20,19 @@ const observedLinks = [{ label: "Home", href: "#home" }, ...links];
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [scrolled, setScrolled] = useState(false);
+
+useEffect(() => {
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 4);
+  };
+
+  handleScroll();
+  window.addEventListener("scroll", handleScroll, { passive: true });
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
 
   useEffect(() => {
     const sections = observedLinks
@@ -43,7 +58,15 @@ export default function Nav() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line/70 bg-bg/80 shadow-[0_10px_40px_-30px_rgba(0,0,0,0.8)] backdrop-blur-xl">
+    
+<header
+  className={`sticky top-0 z-50 border-b shadow-[0_10px_40px_-30px_rgba(0,0,0,0.8)] transition-all duration-300 ${
+    scrolled
+      ? "border-line/70 bg-bg/80 backdrop-blur-xl"
+      : "border-transparent bg-bg/70 backdrop-blur-sm shadow-none"
+  }`}
+>
+
       <nav
         aria-label="Main navigation"
         className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-4 lg:px-[72px]"
@@ -78,9 +101,9 @@ export default function Nav() {
           <a
             href={siteLinks.cv}
             download
-            className="rounded-btn bg-accent px-4 py-2.5 text-sm font-semibold text-on-accent transition-all duration-200 hover:-translate-y-px hover:shadow-[0_10px_28px_-10px_rgba(227,179,65,0.5)] xl:px-5"
+            className="flex  justify-center items-center gap-1 rounded-btn bg-accent-button px-4 py-2.5 text-sm font-semibold text-on-accent transition-all duration-200 hover:-translate-y-px hover:shadow-[0_10px_28px_-10px_rgba(227,179,65,0.5)] xl:px-5"
           >
-            Download CV <span aria-hidden="true">↗</span>
+            Download CV <FaDownload color="black" />
           </a>
         </div>
 
@@ -126,9 +149,9 @@ export default function Nav() {
               href={siteLinks.cv}
               download
               onClick={() => setMenuOpen(false)}
-              className="inline-flex w-fit rounded-btn bg-accent px-5 py-3 text-sm font-semibold text-on-accent"
+              className="inline-flex w-fit rounded-btn bg-accent-button px-5 py-3 text-sm font-semibold text-on-accent"
             >
-              Download CV ↗
+              Download CV
             </a>
           </div>
         </div>

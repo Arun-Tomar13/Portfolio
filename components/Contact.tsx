@@ -7,6 +7,8 @@ import Section from "@/components/Section";
 import { getEmailComposeUrl, links, socialLinks } from "@/data/links";
 import { fadeUp, stagger } from "@/components/motion";
 import SocialIcon from "@/components/SocialIcon";
+import { RiSendInsFill } from "react-icons/ri";
+
 
 export default function Contact() {
   const [message, setMessage] = useState("");
@@ -38,6 +40,7 @@ export default function Contact() {
       id="contact"
       eyebrow="// Get in touch"
       title="Have something in mind?"
+      className="!pb-12 md:!pb-16"
     >
       <motion.div
         variants={stagger}
@@ -90,9 +93,6 @@ export default function Contact() {
                     {links.email}
                   </span>
                 </span>
-                <span className="ml-auto text-muted transition-colors group-hover:text-accent" aria-hidden="true">
-                  ↗
-                </span>
               </a>
 
               <a
@@ -120,9 +120,6 @@ export default function Contact() {
                   <span className="mt-1 block text-sm font-medium text-text">
                     {links.phone}
                   </span>
-                </span>
-                <span className="ml-auto text-muted transition-colors group-hover:text-accent" aria-hidden="true">
-                  ↗
                 </span>
               </a>
             </div>
@@ -180,9 +177,20 @@ export default function Contact() {
 
             <span
               aria-hidden="true"
-              className="flex size-11 shrink-0 items-center justify-center rounded-2xl border border-[rgba(227,179,65,0.2)] bg-[rgba(227,179,65,0.07)] text-lg text-accent"
+              className="flex size-11 shrink-0 items-center justify-center rounded-2xl border border-[rgba(227,179,65,0.2)] bg-[rgba(227,179,65,0.07)] text-accent"
             >
-              ↗
+              <svg
+                className="size-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3 7 9 6 9-6" />
+              </svg>
             </span>
           </div>
 
@@ -237,9 +245,9 @@ export default function Contact() {
           <div className="mt-5 flex flex-wrap items-center gap-4">
             <button
               type="submit"
-              className="inline-flex items-center justify-center gap-3 rounded-btn bg-accent px-6 py-3 text-sm font-semibold text-on-accent transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_28px_-10px_rgba(227,179,65,0.5)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+              className="inline-flex items-center justify-center gap-1 rounded-btn bg-accent-button px-6 py-3 text-sm font-semibold text-on-accent transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_28px_-10px_rgba(227,179,65,0.5)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
             >
-              Send message <span aria-hidden="true">↗</span>
+              Send message <RiSendInsFill />
             </button>
 
             <p

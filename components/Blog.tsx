@@ -4,7 +4,6 @@ import { motion, useReducedMotion } from "framer-motion";
 import Section from "@/components/Section";
 import { fadeUp, stagger } from "@/components/motion";
 import { blogArticles } from "@/data/blog";
-import { links } from "@/data/links";
 
 export default function Blog() {
   const shouldReduceMotion = useReducedMotion();
@@ -33,27 +32,33 @@ export default function Blog() {
           <motion.article
             key={article.url}
             variants={articleVariants}
-            className="rounded-card border border-line bg-panel p-5 transition-colors duration-200 hover:border-[rgba(227,179,65,0.35)] sm:p-6"
+            className="rounded-card"
           >
-            <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-              <span className="rounded-full border border-[rgba(227,179,65,0.25)] bg-[rgba(227,179,65,0.07)] px-3 py-1 font-mono text-[10px] tracking-[0.12em] text-accent">
-                FEATURED ARTICLE
-              </span>
-              <span className="font-mono text-[10px] tracking-[0.12em] text-dim">
-                ENGINEERING NOTES
-              </span>
-            </div>
+            <motion.a
+              href={article.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Read article: ${article.title}`}
+              className="group block rounded-card border border-line bg-panel p-5 transition-colors duration-200 hover:border-[rgba(227,179,65,0.35)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent sm:p-6"
+            >
+              <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+                <span className="rounded-full border border-[rgba(227,179,65,0.25)] bg-[rgba(227,179,65,0.07)] px-3 py-1 font-mono text-[10px] tracking-[0.12em] text-accent">
+                  FEATURED ARTICLE
+                </span>
+                <span className="font-mono text-[10px] tracking-[0.12em] text-dim">
+                  ENGINEERING NOTES
+                </span>
+              </div>
 
-            <h3 className="max-w-4xl text-lg font-semibold leading-snug tracking-tight text-text sm:text-xl">
-              {article.title}
-            </h3>
+              <h3 className="max-w-4xl text-lg font-semibold leading-snug tracking-tight text-text transition-colors group-hover:text-accent sm:text-xl">
+                {article.title}
+              </h3>
 
-            <p className="mt-3 max-w-3xl text-sm leading-6 text-muted">
-              {article.description}
-            </p>
+              <p className="mt-3 max-w-3xl text-sm leading-6 text-muted">
+                {article.description}
+              </p>
 
-            <div className="mt-5 flex flex-wrap items-center justify-between gap-4">
-              <ul className="flex flex-wrap gap-2" aria-label="Article topics">
+              <ul className="mt-5 flex flex-wrap gap-2" aria-label="Article topics">
                 {article.tags.map((tag) => (
                   <li
                     key={tag}
@@ -63,16 +68,7 @@ export default function Blog() {
                   </li>
                 ))}
               </ul>
-
-              <a
-                href={article.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex shrink-0 items-center gap-2 text-sm font-medium text-accent transition-colors hover:text-text focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
-              >
-                Read article <span aria-hidden="true">↗</span>
-              </a>
-            </div>
+            </motion.a>
           </motion.article>
         ))}
 

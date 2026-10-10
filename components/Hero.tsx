@@ -69,9 +69,9 @@ export default function Hero() {
           >
             <a
               href="#experience"
-              className="rounded-btn bg-accent px-6 py-3.5 text-sm font-semibold text-on-accent shadow-[0_12px_35px_-18px_rgba(227,179,65,0.8)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_28px_-10px_rgba(227,179,65,0.5)]"
+              className="rounded-btn bg-accent-button px-6 py-3.5 text-sm font-semibold text-on-accent shadow-[0_12px_35px_-18px_rgba(227,179,65,0.8)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_28px_-10px_rgba(227,179,65,0.5)]"
             >
-              View experience <span aria-hidden="true">↗</span>
+              View experience
             </a>
 
             <a

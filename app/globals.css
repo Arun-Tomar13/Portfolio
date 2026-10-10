@@ -15,6 +15,7 @@
   --dim: #5B6678;
 
   --accent: #E3B341;
+  --accent-button: #D4A32F;
   --on-accent: #171006;
   --success: #3FB950;
 }
@@ -31,6 +32,7 @@
   --color-dim: var(--dim);
 
   --color-accent: var(--accent);
+  --color-accent-button: var(--accent-button);
   --color-on-accent: var(--on-accent);
   --color-success: var(--success);
 
@@ -56,6 +58,7 @@ html {
 }
 
 body {
+  isolation: isolate;
   min-height: 100dvh;
   margin: 0;
   overflow-x: clip;
@@ -77,6 +80,36 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+body::after {
+  position: fixed;
+  z-index: -1;
+  pointer-events: none;
+  inset: -8%;
+  background:
+    radial-gradient(
+      ellipse 42% 28% at 17% 28%,
+      rgba(227, 179, 65, 0.065),
+      transparent 72%
+    ),
+    radial-gradient(
+      ellipse 34% 40% at 78% 43%,
+      rgba(227, 179, 65, 0.042),
+      transparent 74%
+    ),
+    radial-gradient(
+      ellipse 46% 24% at 53% 82%,
+      rgba(255, 177, 59, 0.034),
+      transparent 72%
+    ),
+    radial-gradient(
+      ellipse 20% 44% at 39% 57%,
+      rgba(227, 179, 65, 0.024),
+      transparent 70%
+    );
+  content: "";
+  animation: dragon-energy-drift 52s ease-in-out infinite alternate;
+}
+
 body::before {
   position: fixed;
   z-index: -1;
@@ -90,6 +123,16 @@ body::before {
   content: "";
   inset: 0;
   mask-image: linear-gradient(to bottom, black, transparent 75%);
+}
+
+@keyframes dragon-energy-drift {
+  from {
+    transform: translate3d(-1.5%, 1%, 0);
+  }
+
+  to {
+    transform: translate3d(1.5%, -1%, 0);
+  }
 }
 
 ::selection {
@@ -121,6 +164,11 @@ textarea {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  body::after {
+    animation: none;
+    transform: none;
+  }
+
   *,
   *::before,
   *::after {

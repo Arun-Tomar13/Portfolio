@@ -64,9 +64,21 @@ export default function Projects() {
 
                 <span
                   aria-hidden="true"
-                  className="flex size-10 items-center justify-center rounded-full border border-white/20 bg-[#0A0D12]/50 text-lg text-text backdrop-blur-md transition-all duration-200 group-hover:border-accent group-hover:bg-accent group-hover:text-on-accent"
+                  className="flex size-10 items-center justify-center rounded-full border border-white/20 bg-[#0A0D12]/50 text-lg text-text backdrop-blur-md transition-all duration-200 group-hover:border-accent group-hover:bg-accent-button group-hover:text-on-accent"
                 >
-                  ↗
+                  <svg
+                    className="size-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M14 3h7v7" />
+                    <path d="M10 14 21 3" />
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  </svg>
                 </span>
               </div>
 
